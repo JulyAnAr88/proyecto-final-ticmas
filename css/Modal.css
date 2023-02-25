@@ -1,0 +1,136 @@
+/* ********** Modal ********** */
+.modal {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-alpha-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+  }
+  
+  .modal-content {
+    
+    position: relative;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .modal-close svg {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--first-color);
+  }
+  
+  .modal[id|="trabajo"]:target, .modal[id|="hobbits"]:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+.modal-red{
+  padding: 4rem 0.7rem 0.5rem 0.7rem;
+}
+
+.hobbits-modal{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    box-shadow: var(--white-alpha-color) 0px 8px 24px, var(--black-alpha-color) 0px 16px 56px, var(--white-alpha-color) 0px 24px 80px;
+  padding: 4rem 0.7rem 0.5rem 0.7rem;
+}
+
+.hobbits-video{
+  margin: 0;
+  padding: 0.5rem 0; 
+
+}
+.hobbits-video iframe{
+  left:0;
+  top:0;
+  
+  max-width: 280px;
+  max-height: 150px;
+  height:100%;
+  position:relative;
+}
+
+  @media screen and (min-width: 425px) {
+    .modal-close svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        
+      }
+      .hobbits-modal {
+        max-width: 800px;     
+        width: 410px;
+        height: 275px;
+        padding: 2.9rem 0.4rem 0.1rem 0.4rem;
+      }
+      .hobbits-video{
+        margin: 0;
+        padding: 0.5rem 0; 
+      
+      }
+      .hobbits-video iframe{
+        left:0;
+        top:0;
+        width: 390px;
+        max-width: 400px;
+        max-height: 195px;
+        height:275px;
+        position:relative;
+      }
+  }
+
+  @media screen and (min-width: 768px) {
+    
+    .modal-close svg {
+      width: 2.2rem;
+      height: 2.2rem;
+      
+    }
+    .hobbits-modal{
+      max-width: 800px;     
+        width: 750px;
+        height: 450px;
+        padding: 2.9rem 0.4rem 0.1rem 0.4rem;
+    }
+    .hobbits-video iframe{
+      margin: auto;
+      max-width: 730px;
+      width: 730px;
+      height: 385px;
+      max-height: 380px;
+        box-shadow: 0 0 20px var(--letter-shadow);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+
+    .modal-close svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      
+    }
+
+    .hobbits-video{
+      margin: 0;
+      padding: 0.5rem 0; 
+      width: 750px;
+        height: 450px;
+    
+    }
+    
+  }
+  
